@@ -1,7 +1,7 @@
 import requests
-import ApiKey
+import ApiKeys
 
-api_key = ApiKey.api_key
+api_key = ApiKeys.api_key1
 
 def get_news(country,api_key_=api_key):
   url = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={api_key_}'

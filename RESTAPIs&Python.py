@@ -1,6 +1,9 @@
 import requests
+import ApiKey
 
-r = requests.get('https://newsapi.org/v2/everything?qInTitle=stock%20market&from=2022-11-15&to=2022-11-15&sortBy=popularity&language=en&apiKey=50f4ac2844cc472896187cb982893609')
+api_key = ApiKey.api_key
+url = f'https://newsapi.org/v2/everything?qInTitle=stock%20market&from=2022-11-15&to=2022-11-15&sortBy=popularity&language=en&apiKey={api_key}'
+r = requests.get(url)
 content = r.json()
 
 articles = content['articles']
